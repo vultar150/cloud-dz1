@@ -1,0 +1,17 @@
+<doctype html>
+<title>Добавление информации - Python Flask MySQL </title>
+<style>
+	body {
+		background-color: #c7b39b;
+	}
+</style>
+<h2>Добавить информацию о новом студенте</h2>
+<form method="post" action="/add">
+    <dl>
+		<p><input name="inputName" value="" type="text" placeholder="Name" autocomplete="off" required>
+		<p><input name="inputSurname" value="" type="text" placeholder="Surname" autocomplete="off" required>
+		<p><input name="inputEmail" value="" type="text" placeholder="Email" autocomplete="off" required>
+		<p><input name="inputGroup" value="" type="text" placeholder="Group" autocomplete="off" required>
+    </dl>
+    <p><input type="submit" value="Отправить">
+</form>

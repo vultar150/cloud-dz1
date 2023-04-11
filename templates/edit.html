@@ -1,0 +1,20 @@
+<doctype html>
+<title>Редактирование - Python Flask MySQL</title>
+<style>
+	body {
+		background-color: #c7b39b;
+	}
+</style>
+<h2>Изменить информацию о студенте</h2>
+<form method="post" action="/update">
+    <dl>
+		<p><input name="inputName" value="{{ row['student_name'] }}" type="text" placeholder="Имя" autocomplete="off" required>
+		<p><input name="inputSurname" value="{{ row['student_surname'] }}" type="text" placeholder="Фамилия" autocomplete="off" required>
+		<p><input name="inputEmail" value="{{ row['student_email'] }}" type="text" placeholder="Email" autocomplete="off" required>
+		<p><input name="inputGroup" value="{{ row['student_group'] }}" type="text" placeholder="Группа" autocomplete="off" required>
+    </dl>
+    <p>
+		<input name="id" value="{{ row['student_id'] }}" type="hidden">
+		<input type="submit" value="Отправить">
+	</p>
+</form>

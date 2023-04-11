@@ -1,0 +1,23 @@
+<doctype html>
+<title>Список студентов - Python Flask MySQL</title>
+<style>
+	body {
+		background-color: #c7b39b;
+	}
+</style>
+
+<p><a href="{{ url_for('.add_student_view') }}"> Добавить студента </a></p>
+
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+
+{{ table }}
